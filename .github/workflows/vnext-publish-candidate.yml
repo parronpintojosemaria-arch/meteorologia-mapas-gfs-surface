@@ -1,3 +1,4 @@
+# Render visual vNext 2 · paletas profesionales + contornos HD legibles
 name: vNext · Candidato Pages · GFS surface · 2.058 mapas
 
 on:
@@ -103,8 +104,9 @@ jobs:
           manifest['schema']='vnext-gfs-shard-1'
           manifest['publication_role']='gfs-surface-shard'
           manifest['production_changed']=False
+          manifest['visual_profile']='vnext-2-professional-hd'
           (root/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-          print(f'GFS SURFACE SHARD OK · 2058 mapas · {mib:.2f} MiB')
+          print(f'GFS SURFACE SHARD OK · 2058 mapas · {mib:.2f} MiB · visual vNext 2')
           PY
 
       - name: Preparar sitio candidato
@@ -123,7 +125,7 @@ jobs:
           cat > ../site/index.html <<'HTML'
           <!doctype html><meta charset="utf-8"><title>Meteorología Interactiva · GFS surface</title>
           <h1>Meteorología Interactiva · GFS surface</h1>
-          <p>Candidato vNext HD. Datos: NOAA/NCEP GFS. Este sitio no cambia WordPress por sí solo.</p>
+          <p>Candidato vNext HD · perfil visual vNext 2 profesional. Datos: NOAA/NCEP GFS. Este sitio no cambia WordPress por sí solo.</p>
           <p><a href="current.json">current.json</a></p>
           HTML
           touch ../site/.nojekyll
