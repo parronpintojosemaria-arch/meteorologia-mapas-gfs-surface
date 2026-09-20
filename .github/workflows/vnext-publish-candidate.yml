@@ -3,6 +3,8 @@
 name: vNext · Candidato Pages · GFS surface · 2.058 mapas
 
 on:
+  schedule:
+    - cron: '10 1 * * *'
   workflow_dispatch:
   push:
     paths:
