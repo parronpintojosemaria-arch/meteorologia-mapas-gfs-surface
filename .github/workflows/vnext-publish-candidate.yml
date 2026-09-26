@@ -1,11 +1,14 @@
 # europe-domain: 40W-60E 22N-76N · regeneracion 2026-09-20
 # Render visual vNext 2 · paletas profesionales + contornos HD legibles
 name: vNext · Candidato Pages · GFS surface · 2.058 mapas
+# freshness-4-cycles · 2026-09-26
 
 on:
   schedule:
-    - cron: '10 1 * * *'
-    - cron: '10 13 * * *'
+    - cron: '20 1 * * *'
+    - cron: '20 7 * * *'
+    - cron: '20 13 * * *'
+    - cron: '20 19 * * *'
   workflow_dispatch:
 
 permissions:
@@ -15,7 +18,7 @@ permissions:
 
 concurrency:
   group: pages-gfs-surface-candidate
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
